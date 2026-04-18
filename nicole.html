@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicole — Guide Accueil & Admissions · IMT Business School</title>
+<meta name="description" content="Pose tes questions à Nicole, ton guide admissions et accueil à Institut Mines-Télécom Business School.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bleu:        #00B8DE;
+  --violet:      #AD1D89;
+  --noir:        #000000;
+  --blanc:       #FFFFFF;
+  --gris-fond:   #F5F7FA;
+  --gris-texte:  #5A6270;
+  --gris-border: rgba(0,0,0,0.08);
+  --bleu-light:  rgba(0,184,222,0.08);
+  --violet-light:rgba(173,29,137,0.07);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', Arial, sans-serif;
+  background: var(--gris-fond);
+  color: var(--noir);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--blanc);
+  border-bottom: 1px solid var(--gris-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo-block img {
+  height: 32px;
+  width: auto;
+}
+.logo-sep {
+  width: 1px;
+  height: 26px;
+  background: var(--gris-border);
+}
+.header-label {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--gris-texte);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.header-link {
+  font-size: 0.82rem;
+  color: var(--bleu);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.header-link:hover { opacity: 0.75; }
+
+/* ── MAIN ── */
+main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+/* ── BADGE ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--violet);
+  background: var(--violet-light);
+  border: 1px solid rgba(173,29,137,0.15);
+  border-radius: 100px;
+  padding: 0.3rem 0.85rem;
+  margin-bottom: 1.25rem;
+}
+.badge::before {
+  content: '';
+  width: 5px; height: 5px;
+  background: var(--violet);
+  border-radius: 50%;
+}
+
+/* ── INTRO ── */
+.intro { margin-bottom: 2.5rem; }
+.intro h1 {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+}
+.intro h1 em {
+  font-style: normal;
+  color: var(--bleu);
+}
+.intro p {
+  font-size: 0.97rem;
+  color: var(--gris-texte);
+  line-height: 1.65;
+  max-width: 580px;
+}
+
+/* ── AVATAR CARD ── */
+.avatar-card {
+  background: var(--blanc);
+  border-radius: 16px;
+  border: 1px solid var(--gris-border);
+  overflow: hidden;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+.avatar-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--gris-border);
+}
+.status-dot {
+  width: 8px; height: 8px;
+  background: #22C55E;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.2);
+  flex-shrink: 0;
+}
+.avatar-card-header strong {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+.avatar-card-header span {
+  font-size: 0.78rem;
+  color: var(--gris-texte);
+}
+.avatar-card-header .lang-badge {
+  margin-left: auto;
+  display: flex;
+  gap: 0.35rem;
+}
+.lang-badge span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--gris-texte);
+  background: var(--gris-fond);
+  border: 1px solid var(--gris-border);
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+}
+.avatar-wrapper {
+  width: 100%;
+  background: var(--noir);
+}
+.avatar-wrapper iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+}
+
+/* ── SUGGESTIONS ── */
+.suggestions-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gris-texte);
+  margin-bottom: 0.9rem;
+}
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.suggestion-btn {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--noir);
+  background: var(--blanc);
+  border: 1px solid var(--gris-border);
+  border-radius: 100px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.suggestion-btn:hover {
+  border-color: var(--bleu);
+  background: var(--bleu-light);
+  color: var(--noir);
+}
+.suggestion-btn.violet:hover {
+  border-color: var(--violet);
+  background: var(--violet-light);
+}
+
+/* ── INFO STRIP ── */
+.info-strip {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--gris-border);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--gris-border);
+}
+.info-item {
+  background: var(--blanc);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.info-item .icon {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.info-item strong {
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.info-item p {
+  font-size: 0.78rem;
+  color: var(--gris-texte);
+  line-height: 1.5;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--blanc);
+  border-top: 1px solid var(--gris-border);
+  padding: 1.5rem 2rem;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer-inner p {
+  font-size: 0.75rem;
+  color: var(--gris-texte);
+}
+.footer-inner a {
+  color: var(--bleu);
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer-accredits {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.accredit-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid var(--gris-border);
+  color: var(--gris-texte);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  main { padding: 2rem 1.25rem 3rem; }
+  .header-label { display: none; }
+  .logo-sep { display: none; }
+  .suggestions { gap: 0.5rem; }
+  .suggestion-btn { font-size: 0.8rem; padding: 0.45rem 0.9rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <div class="logo-block">
+      <img src="logo-imt-bs.png" alt="Institut Mines-Télécom Business School">
+      <div class="logo-sep"></div>
+      <span class="header-label">Service Admissions &amp; Accueil</span>
+    </div>
+    <a href="https://www.imt-bs.eu" target="_blank" class="header-link">imt-bs.eu →</a>
+  </div>
+</header>
+
+<!-- ── MAIN ── -->
+<main>
+
+  <div class="badge">Guide Admissions</div>
+
+  <div class="intro">
+    <h1>Découvre <em>IMT-BS</em><br>avec Nicole</h1>
+    <p>Pose tes questions en direct à Nicole, ton guide virtuel du service Admissions &amp; Accueil. Logement, visa, formalités, vie sur le campus&nbsp;: elle répond à tout, en français et en anglais.</p>
+  </div>
+
+  <!-- Avatar -->
+  <div class="avatar-card">
+    <div class="avatar-card-header">
+      <div class="status-dot"></div>
+      <div>
+        <strong>Nicole</strong>
+        <span>&nbsp;· Guide Admissions &amp; Accueil</span>
+      </div>
+      <div class="lang-badge">
+        <span>FR</span>
+        <span>EN</span>
+      </div>
+    </div>
+    <div class="avatar-wrapper">
+      <iframe
+        src="https://embed.liveavatar.com/v1/5e226562-849a-45c6-a197-cdcfa467ea6f"
+        allow="microphone"
+        title="Nicole — Guide Admissions IMT Business School">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Suggestions -->
+  <p class="suggestions-label">Questions fréquentes — essaie !</p>
+  <div class="suggestions">
+    <button class="suggestion-btn">Comment trouver un logement&nbsp;?</button>
+    <button class="suggestion-btn violet">Ai-je besoin d'un visa&nbsp;?</button>
+    <button class="suggestion-btn">Quand ont lieu les journées d'accueil&nbsp;?</button>
+    <button class="suggestion-btn violet">Quelles assurances sont obligatoires&nbsp;?</button>
+    <button class="suggestion-btn">Comment créer mon compte numérique&nbsp;?</button>
+    <button class="suggestion-btn violet">What is IMT Business School&nbsp;?</button>
+    <button class="suggestion-btn">Comment contacter la DRDI&nbsp;?</button>
+  </div>
+
+  <!-- Info strip -->
+  <div class="info-strip">
+    <div class="info-item">
+      <span class="icon">🏠</span>
+      <strong>Logement</strong>
+      <p>Résidence sur campus gérée par la Maisel. Priorité aux 1res années, échanges et double diplôme.</p>
+    </div>
+    <div class="info-item">
+      <span class="icon">📋</span>
+      <strong>Visa</strong>
+      <p>Gratuit pour les étudiants UE/Schengen. Hors UE : contacte l'ambassade de France dès que possible.</p>
+    </div>
+    <div class="info-item">
+      <span class="icon">🛡️</span>
+      <strong>Assurances</strong>
+      <p>Maladie, habitation et responsabilité civile obligatoires. Inscription Ameli pour les hors UE.</p>
+    </div>
+    <div class="info-item">
+      <span class="icon">📅</span>
+      <strong>Journées d'accueil</strong>
+      <p>Organisées par la DRDI chaque semestre : septembre et janvier.</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <p>Institut Mines-Télécom Business School · 9, rue Charles Fourier – 91011 Évry-Courcouronnes · <a href="mailto:incoming-exchange@imt-bs.eu">incoming-exchange@imt-bs.eu</a></p>
+    <div class="footer-accredits">
+      <span class="accredit-pill">Grade Master</span>
+      <span class="accredit-pill">Qualiopi</span>
+      <span class="accredit-pill">CGE</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
